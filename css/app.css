@@ -51,12 +51,11 @@ body {
 
 @media (min-width: 768px) {
     .landing .fold .fold-inner {
-      padding: 25px 0; } }
+      height: 100vh; } }
 
 @media (min-width: 1140px) {
     .landing .fold .fold-inner {
-      padding: 35px 0;
-      height: 100vh; } }
+      padding: 35px 0; } }
 
 .landing .fold header h1 {
   color: #ffea7f;

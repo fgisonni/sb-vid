@@ -19,16 +19,6 @@
               <div class="video">
                 <script src="https://fast.wistia.com/embed/medias/jydrodu1vv.jsonp" async></script>
                 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-                <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
-                  <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                    <div id="vid" class="wistia_embed wistia_async_jydrodu1vv seo=false videoFoam=true popoverAnimateThumbnail=true fullscreenOnRotateToLandscape=false" style="height:100%;position:relative;width:100%">&nbsp;</div>
-                  </div>
-                </div>
-                <div class="playbutton-overlay">
-                </div>
-                <div class="pausebutton-overlay">
-                </div>
-                <div class="play-button"></div>
                 <script>
 
                   window._wq = window._wq || [];
@@ -43,6 +33,8 @@
                       const videoPlayBtnOverlay = document.querySelector('.playbutton-overlay');
                       const videoPauseBtnOverlay = document.querySelector('.pausebutton-overlay');
                       const playBtn = document.querySelector('.play-button');
+
+                      videoPlayBtnOverlay.style.display = 'block';
 
                       videoPauseBtnOverlay.addEventListener('click', function(e){
                         video.pause();
@@ -72,6 +64,16 @@
                   }});
 
                 </script>
+                <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+                  <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                    <div id="vid" class="wistia_embed wistia_async_jydrodu1vv seo=false videoFoam=true popoverAnimateThumbnail=true fullscreenOnRotateToLandscape=false" style="height:100%;position:relative;width:100%">&nbsp;</div>
+                  </div>
+                </div>
+                <div class="playbutton-overlay">
+                </div>
+                <div class="pausebutton-overlay">
+                </div>
+                <div class="play-button"></div>
               </div>
           </div>
           <div class="cta-toggle">
@@ -127,5 +129,5 @@
       </div>
     </div>
   </footer>
-<script type="text/javascript" src="js/app.e5703987.js"></script></body>
+<script type="text/javascript" src="js/app.46e2dd4e.js"></script></body>
 </html>

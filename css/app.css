@@ -39,11 +39,15 @@ body {
 
 @media (min-width: 1140px) {
   .landing .fold {
-    height: 100vh;
     height: auto; } }
 
 .landing .fold .fold-inner {
-  padding: 35px 0; }
+  padding: 35px 0;
+  height: 100vh; }
+
+@media (min-width: 720px) {
+    .landing .fold .fold-inner {
+      height: auto; } }
 
 @media (min-width: 768px) {
     .landing .fold .fold-inner {
@@ -51,8 +55,8 @@ body {
 
 @media (min-width: 1140px) {
     .landing .fold .fold-inner {
-      height: 100vh;
-      padding: 35px 0; } }
+      padding: 35px 0;
+      height: 100vh; } }
 
 .landing .fold header h1 {
   color: #ffea7f;
@@ -88,8 +92,17 @@ body {
     overflow: hidden;
     position: relative; }
 
-.landing .fold .video-section .video .playbutton-overlay,
-    .landing .fold .video-section .video .pausebutton-overlay {
+.landing .fold .video-section .video .playbutton-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+      margin: auto;
+      z-index: 11; }
+
+.landing .fold .video-section .video .pausebutton-overlay {
       position: absolute;
       top: 0;
       bottom: 0;

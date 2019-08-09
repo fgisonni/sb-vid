@@ -19,51 +19,6 @@
               <div class="video">
                 <script src="https://fast.wistia.com/embed/medias/jydrodu1vv.jsonp" async></script>
                 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-                <script>
-
-                  window._wq = window._wq || [];
-                  _wq.push({ id: "jydrodu1vv", onReady: function(video) {
-                    video.bind('secondchange', function(s) {
-                      if (s === 1) {
-                        document.querySelector('.cta-content').classList.add('hide')
-                        document.querySelector('.cta-button-holder').classList.remove('hide')
-                        document.querySelector('.header').style.display = 'none';
-                      }
-
-                      const videoPlayBtnOverlay = document.querySelector('.playbutton-overlay');
-                      const videoPauseBtnOverlay = document.querySelector('.pausebutton-overlay');
-                      const playBtn = document.querySelector('.play-button');
-
-                      videoPlayBtnOverlay.style.display = 'block';
-
-                      videoPauseBtnOverlay.addEventListener('click', function(e){
-                        video.pause();
-
-                        videoPlayBtnOverlay.style.display = 'block';
-                        videoPauseBtnOverlay.style.display = 'none';
-
-                        playBtn.style.display = "block";
-
-                      });
-
-                      videoPlayBtnOverlay.addEventListener('click', function(e){
-                        video.play();
-                        videoPlayBtnOverlay.style.display = 'none';
-                        videoPauseBtnOverlay.style.display = 'block';
-
-                        playBtn.style.display = "none";
-                      });
-
-                      const ctaBtn = document.querySelector('.cta-button')
-
-                      ctaBtn.addEventListener('click', function(){
-                        video.pause();
-                      })
-
-                    });
-                  }});
-
-                </script>
                 <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
                   <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
                     <div id="vid" class="wistia_embed wistia_async_jydrodu1vv seo=false videoFoam=true popoverAnimateThumbnail=true fullscreenOnRotateToLandscape=false" style="height:100%;position:relative;width:100%">&nbsp;</div>
@@ -74,6 +29,51 @@
                 <div class="pausebutton-overlay">
                 </div>
                 <div class="play-button"></div>
+                <script>
+
+                  window._wq = window._wq || [];
+                  _wq.push({ id: "jydrodu1vv", onReady: function(video) {
+                    video.bind('secondchange', function(s) {
+                      if (s === 1) {
+                        document.querySelector('.cta-content').classList.add('hide')
+                        document.querySelector('.cta-button-holder').classList.remove('hide')
+                        document.querySelector('.header').style.display = 'none';
+                      }
+                    });
+
+                    const videoPlayBtnOverlay = document.querySelector('.playbutton-overlay');
+                    const videoPauseBtnOverlay = document.querySelector('.pausebutton-overlay');
+                    const playBtn = document.querySelector('.play-button');
+
+                    videoPlayBtnOverlay.style.display = 'block';
+
+                    videoPauseBtnOverlay.addEventListener('click', function(e){
+                      video.pause();
+
+                      videoPlayBtnOverlay.style.display = 'block';
+                      videoPauseBtnOverlay.style.display = 'none';
+
+                      playBtn.style.display = "block";
+
+                    });
+
+                    videoPlayBtnOverlay.addEventListener('click', function(e){
+                      video.play();
+                      videoPlayBtnOverlay.style.display = 'none';
+                      videoPauseBtnOverlay.style.display = 'block';
+
+                      playBtn.style.display = "none";
+                    });
+
+                    const ctaBtn = document.querySelector('.cta-button');
+
+                    ctaBtn.addEventListener('click', function(){
+                      video.pause();
+                    });
+
+                  }});
+
+                </script>
               </div>
           </div>
           <div class="cta-toggle">
@@ -129,5 +129,5 @@
       </div>
     </div>
   </footer>
-<script type="text/javascript" src="js/app.46e2dd4e.js"></script></body>
+<script type="text/javascript" src="js/app.28b3c5c5.js"></script></body>
 </html>

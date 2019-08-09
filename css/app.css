@@ -114,8 +114,8 @@ body {
 .landing .fold .video-section .video .play-button {
       background: #d20000;
       border-radius: 50% / 10%;
-      width: 17vh;
-      height: 13vh;
+      width: 12vh;
+      height: 9vh;
       padding: 0;
       position: absolute;
       top: 0;
@@ -128,6 +128,11 @@ body {
               transform: scale(1);
       -webkit-animation: pulseButton 2s infinite ease-out;
               animation: pulseButton 2s infinite ease-out; }
+
+@media (min-width: 768px) {
+        .landing .fold .video-section .video .play-button {
+          width: 17vh;
+          height: 13vh; } }
 
 @media (min-width: 1140px) {
         .landing .fold .video-section .video .play-button {
@@ -154,9 +159,15 @@ body {
         height: 0;
         display: block;
         margin: auto;
-        border-top: 3vh solid transparent;
-        border-bottom: 3vh solid transparent;
-        border-left: 5vh solid white; }
+        border-top: 2vh solid transparent;
+        border-bottom: 2vh solid transparent;
+        border-left: 3vh solid white; }
+
+@media (min-width: 768px) {
+          .landing .fold .video-section .video .play-button:after {
+            border-top: 3vh solid transparent;
+            border-bottom: 3vh solid transparent;
+            border-left: 5vh solid white; } }
 
 @-webkit-keyframes pulseButton {
   0% {

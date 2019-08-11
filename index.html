@@ -5,7 +5,7 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Webpack 4 – App</title>
+  <title>Sugar Balance</title>
 <link rel="shortcut icon" href="favicon.ico"><link href="css/app.css" rel="stylesheet"></head>
 <body>
   <div class="landing">
@@ -33,13 +33,27 @@
 
                   window._wq = window._wq || [];
                   _wq.push({ id: "jydrodu1vv", onReady: function(video) {
+
+
+
+                    if(window.localStorage.getItem('ctaContentHide')){
+                      localStorage.setItem('ctaContentHide', document.querySelector('.cta-content').style.display = 'none')
+                    }
+                    if(window.localStorage.getItem('headerHide')){
+                      localStorage.setItem('headerHide', document.querySelector('.header').style.display = 'none')
+                    }
+                    if(window.localStorage.getItem('ctaIsVisible')){
+                      localStorage.setItem('ctaIsVisible', document.querySelector('.cta-button-holder').style.display = 'block')
+                    }
+
                     video.bind('secondchange', function(s) {
-                      if (s === 1) {
-                        document.querySelector('.cta-content').classList.add('hide')
-                        document.querySelector('.cta-button-holder').classList.remove('hide')
-                        document.querySelector('.header').style.display = 'none';
+                      if (s === 10) {
+                        localStorage.setItem('ctaContentHide', document.querySelector('.cta-content').style.display = 'none')
+                        localStorage.setItem('headerHide', document.querySelector('.header').style.display = 'none')
+                        localStorage.setItem('ctaIsVisible', document.querySelector('.cta-button-holder').style.display = 'block')
                       }
                     });
+
 
                     const videoPlayBtnOverlay = document.querySelector('.playbutton-overlay');
                     const videoPauseBtnOverlay = document.querySelector('.pausebutton-overlay');
@@ -82,7 +96,9 @@
             </div>
             <div class="cta-button-holder hide">
               <p class="guarantee">180 Day Money-Back Guarantee</p>
-              <a href="https://www.getsugarbalance.com/int/" class="cta-button" target="_blank">Next Step <img src="images/form-arrow.png"/></a>
+              <a href="https://www.getsugarbalance.com/int/" class="cta-button desktop" target="_blank">Next Step <img src="images/form-arrow.png"/></a>
+              <a href="https://www.buygoods.com/secure/?account_id=5601&screen=checkout_sbmob&product_codename=sugar_balance&redirect=aHR0cHM6Ly9mYXN0LmdldHN1Z2FyYmFsYW5jZS5jb20vc2Itb3B0aW9ucy02Lw%3D%3D&" class="cta-button tablet" target="_blank">Next Step <img src="images/form-arrow.png"/></a>
+              <a href="https://www.buygoods.com/secure/?account_id=5601&screen=checkout_sbmob&product_codename=sugar_balance&redirect=aHR0cHM6Ly9mYXN0LmdldHN1Z2FyYmFsYW5jZS5jb20vc2Itb3B0aW9ucy02Lw%3D%3D&" class="cta-button mobile" target="_blank">Next Step <img src="images/form-arrow.png"/></a>
               <img src="images/credit-cards.png" alt="Credit Cards" class="credit-cards" />
             </div>
           </div>
@@ -129,5 +145,5 @@
       </div>
     </div>
   </footer>
-<script type="text/javascript" src="js/app.bc5e93bc.js"></script></body>
+<script type="text/javascript" src="js/app.b930894c.js"></script></body>
 </html>

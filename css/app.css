@@ -368,6 +368,31 @@ body {
         text-decoration: none;
         margin: 10px 0; }
 
+.footer .footer-link p a.mobile {
+          display: inline-block; }
+
+.footer .footer-link p a.tablet {
+          display: none; }
+
+.footer .footer-link p a.desktop {
+          display: none; }
+
+@media (min-width: 768px) {
+          .footer .footer-link p a.mobile {
+            display: none; }
+          .footer .footer-link p a.tablet {
+            display: inline-block; }
+          .footer .footer-link p a.desktop {
+            display: none; } }
+
+@media (min-width: 1140px) {
+          .footer .footer-link p a.mobile {
+            display: none; }
+          .footer .footer-link p a.tablet {
+            display: none; }
+          .footer .footer-link p a.desktop {
+            display: inline-block; } }
+
 @media (min-width: 1024px) {
       .footer .footer-link {
         position: relative;

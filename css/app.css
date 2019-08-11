@@ -39,6 +39,10 @@ body {
   padding: 35px 0;
   height: 100vh; }
 
+@media (min-width: 1140px) {
+    .landing .fold .fold-inner {
+      padding: 35px 0; } }
+
 @media (orientation: landscape) {
     .landing .fold .fold-inner {
       height: auto; } }

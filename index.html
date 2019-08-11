@@ -59,7 +59,12 @@
                     const videoPauseBtnOverlay = document.querySelector('.pausebutton-overlay');
                     const playBtn = document.querySelector('.play-button');
 
-                    videoPlayBtnOverlay.style.display = 'block';
+
+                    if(window.outerWidth <= 1024){
+                      videoPlayBtnOverlay.style.display = 'block';
+                    }else{
+                      videoPlayBtnOverlay.style.display = 'none';
+                    }
 
                     videoPauseBtnOverlay.addEventListener('click', function(e){
                       video.pause();
@@ -145,5 +150,5 @@
       </div>
     </div>
   </footer>
-<script type="text/javascript" src="js/app.b930894c.js"></script></body>
+<script type="text/javascript" src="js/app.a0f6f753.js"></script></body>
 </html>

@@ -21,7 +21,7 @@
                 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
                 <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
                   <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                    <div id="vid" class="wistia_embed wistia_async_jydrodu1vv seo=false videoFoam=true popoverAnimateThumbnail=true fullscreenOnRotateToLandscape=false" style="height:100%;position:relative;width:100%">&nbsp;</div>
+                    <div id="vid" class="wistia_embed wistia_async_jydrodu1vv seo=false videoFoam=true fullscreenOnRotateToLandscape=false" style="height:100%;position:relative;width:100%">&nbsp;</div>
                   </div>
                 </div>
                 <div class="playbutton-overlay">
@@ -60,28 +60,27 @@
                     const playBtn = document.querySelector('.play-button');
 
 
-                    if(window.outerWidth <= 1024){
-                      videoPlayBtnOverlay.style.display = 'block';
-                    }else{
-                      videoPlayBtnOverlay.style.display = 'none';
-                    }
-
-                    videoPauseBtnOverlay.addEventListener('click', function(e){
-                      video.pause();
-
-                      videoPlayBtnOverlay.style.display = 'block';
-                      videoPauseBtnOverlay.style.display = 'none';
-
-                      playBtn.style.display = "block";
-
-                    });
-
-                    videoPlayBtnOverlay.addEventListener('click', function(e){
-                      video.play();
+                    video.bind("play", function(){
                       videoPlayBtnOverlay.style.display = 'none';
                       videoPauseBtnOverlay.style.display = 'block';
 
                       playBtn.style.display = "none";
+                    });
+
+                    video.bind("pause", function(){
+                      videoPlayBtnOverlay.style.display = 'block';
+                      videoPauseBtnOverlay.style.display = 'none';
+
+                      playBtn.style.display = "block";
+                    });
+
+                    playBtn.style.display = "block";
+                    videoPauseBtnOverlay.addEventListener('click', function(e){
+                      video.pause();
+                    });
+
+                    videoPlayBtnOverlay.addEventListener('click', function(e){
+                      video.play();
                     });
 
                     const ctaBtn = document.querySelector('.cta-button');
@@ -152,5 +151,5 @@
       </div>
     </div>
   </footer>
-<script type="text/javascript" src="js/app.17a837a7.js"></script></body>
+<script type="text/javascript" src="js/app.073d890c.js"></script></body>
 </html>
